@@ -89,11 +89,13 @@ textarea {
 .content-wrapper {
   outline:3px dotted red;
   width:90%;
+  margin: 50px 0;
 }
  /* -------------------------- Base Header - Footer Styles --------------- */
  header {
   display:flex;
   justify-content: center;
+  padding: 15px 0;
 
  }
 
@@ -102,15 +104,26 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin:0;
+
  }
 
- /* .header-divider {
+ .header-divider {
+  width:100%;   /* 100% of the 90%*/
+  height: 1px;
+  margin: 10px 0 20px 0; /* T R B L */
+ }
 
- } */
+ header nav {
+  width: 60%;
+
+ }
 
  header nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* they say space-around */
+  width:100%;
+  list-style-type: none;  /* gets rid of the dot infront of a line item */
  }
 
  
@@ -120,6 +133,18 @@ textarea {
   align-items: center;
   text-align: center;
  }
+
+ footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  width: 55%;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
 
  footer .social-icons {
   display: flex;
@@ -135,14 +160,6 @@ textarea {
 
  /* --------------------------- Mobile Styles  Homepage ---------------------- */
 
- /* main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-
- } */
-
 /* Hero Area */
 .hero-area {
   display:flex;
@@ -154,14 +171,8 @@ textarea {
 aside {
   display:flex;
   justify-content: center;
+
 }
-
-
-
-/* 
-.aside .content-wrapper {
-  width:90%
-} */
 
 /* Features */
 .features {
@@ -169,6 +180,9 @@ aside {
   justify-content: center;
 }
 
+.features h2 {
+  margin-bottom: 60px;
+}
 .features .features-items {
   display: flex;
   justify-content: center;
@@ -176,11 +190,29 @@ aside {
   flex-flow: row wrap;
 }
 
+.features article {
+  width:63%;
+  margin: 30px 0;
+}
+
+.features p {
+  margin: 0;
+}
+
 /* Reviews */
 .reviews {
   display:flex;
   justify-content: center;
 
+}
+
+.reviews h2 {
+  margin-bottom:40px;
+}
+
+.reviews h3 {
+  width:55%;
+  margin: 20px 0;
 }
 
 /* ===================================== About Page ========================== */
@@ -195,6 +227,10 @@ aside {
 
 }
 
+.contact-content p {
+  margin:0;
+}
+
 /* =====================================FAQ PAge =============================== */
 .faq {
   display:flex;
@@ -206,7 +242,17 @@ aside {
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
 }
+
+.faq h2 {
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  margin-bottom: 50px;
+}
+
 
 /* ==========================================================================
    Helper classes
@@ -216,8 +262,7 @@ aside {
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+.hidden {
   display: none !important;
 }
 
