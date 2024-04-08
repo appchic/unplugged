@@ -84,52 +84,75 @@ textarea {
 }
 
 /* ==========================================================================
+   Browser Upgrade Prompt   - not sure why this is here but it was in the solution code
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   /* General Styles */
- 
+/* General Styles */
 html {
-	
+  /* Setting the root font-size with rems is more accessible as it allows the 
+  site’s visitor to set the base font-size they prefer in their browser settings. */
+  font-size: 1rem;
+  /* 16px */
 }
- 
+
 body {
- 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: left;
+  color: #e2e3ed;
 }
- 
-ul, 
+
+ul,
 ol {
- 
+  list-style-type: none;
+  /* gets rid of the dot infront of a line item */
+  margin: 0;
+  padding: 0;
 }
- 
+
 a {
-	
+  color: #e2e3ed;
+  text-decoration: none;
 }
- 
+
 h2 {
- 
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+  font-size: 1.875em;
 }
- 
-h3, 
+
+h3,
 h4 {
- 
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0;
+  font-size: 1.125em;
+  font-weight: 500;
 }
- 
+
 p {
-	
+  font-size: .875em;
+  line-height: 1.285;
 }
- 
-img {
- 
-}
- 
-figure {
- 
-}
- 
+
+img {}
+
+figure {}
+
 address {
- 
+  font-style: normal;
 }
- 
+
 /* content wrapper for whole site */
 .content-wrapper {
   outline: 3px dotted red;
@@ -147,6 +170,7 @@ header {
     the margin in the main .content-wrapper. To overwrite this, we will add padding of 15px here 
     and then inthe header content-wrapper, zero out the margin. */
   padding: 15px 0;
+  background-color: #202322;
 
 }
 
@@ -161,6 +185,7 @@ header .content-wrapper {
 }
 
 .header-divider {
+  background: #3a3a3a;
   width: 100%;
   /* 100% of the 90%*/
   height: 1px;
@@ -172,7 +197,9 @@ header .content-wrapper {
 /* the nav takes up about 60% of the 90% from content wrapper */
 header nav {
   width: 60%;
-
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* the nav list takes up 100% of the 60% of the nav (parent)*/
@@ -180,16 +207,18 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  list-style-type: none;
-  /* gets rid of the dot infront of a line item */
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 
 footer p {
@@ -229,12 +258,46 @@ footer .copyright {
   justify-content: center;
 }
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 /* Aside */
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
 
+}
+
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features */
@@ -247,6 +310,11 @@ aside {
   margin-bottom: 60px;
 }
 
+.features article {
+  width: 63%;
+  margin: 30px 0;
+}
+
 .features .features-items {
   display: flex;
   justify-content: center;
@@ -254,17 +322,14 @@ aside {
   flex-flow: row wrap;
 }
 
-.features article {
-  width: 63%;
-  margin: 30px 0;
-}
-
 .features p {
+  text-align: center;
   margin: 0;
 }
 
 /* Reviews */
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
 
@@ -272,6 +337,7 @@ aside {
 
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 /* the h3 is 55% of the content-wrapper(90%) */
@@ -282,11 +348,13 @@ aside {
 
 /* ===================================== About Page ========================== */
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
 
@@ -297,8 +365,11 @@ aside {
   /* zero out margins for paragraphs because tehj spacign has been handled */
 }
 
-/* =====================================FAQ PAge =============================== */
+/* ==========================================================================
+   FAQ Page
+   ========================================================================== */
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
 }
@@ -314,6 +385,7 @@ aside {
 
 .faq h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .faq-content {
@@ -422,6 +494,16 @@ aside {
     /* this is the 100px that are at the top and bottom of EACH section */
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
 
   /* -------------------------- Base Header - Footer Styles --------------- */
   header {
@@ -431,6 +513,10 @@ aside {
   header .content-wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+
+  header figure {
+    width: 30%;
   }
 
   .header-divider {
@@ -449,6 +535,11 @@ aside {
   }
 
   /* Hero Area */
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+  }
 
   /* Aside */
   aside .content-wrapper {
@@ -465,18 +556,22 @@ aside {
   }
 
   /* Features */
+  .features h2 {
+    margin-bottom: 20px;
+  }
 
   .features article {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
     /*Specifies how flexbox items are placed in the flexbox.*/
-    flex-basis: 50%; /* 50% so 2 can fit on a single row */
+    flex-basis: 50%;
+    /* 50% so 2 can fit on a single row */
 
   }
 
   .features .features-item-description {
-    width: 62%; 
+    width: 62%;
   }
 
   /* Reviews */
@@ -485,25 +580,43 @@ aside {
     justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
   .reviews article div {
-    width:49%;
+    width: 49%;
 
   }
 
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
+  
   /* Footer */
   footer .content-wrapper {
     width: 65%;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /*Aligns flex items along the cross axis of the current line of the flex container.*/
+    align-items: center;    /*Aligns flex items along the cross axis of the current line of the flex container.*/
+    flex-direction: row;
   }
 
   footer .contact {
     margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.285;
   }
 
   footer .copyright {
@@ -537,6 +650,10 @@ aside {
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
   /* ==========================================================================
    FAQ Page
    ========================================================================== */
@@ -552,6 +669,12 @@ aside {
     width: 100%;
   }
 
+  
+  .faq h4,
+  .faq p {
+    font-size: .875em;
+    line-height: 1.125;
+  }
 
 }
 
@@ -576,10 +699,25 @@ aside {
     padding: 15px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
   /* Hero Area */
   /* site is wider but you don't want the text to go all the way across */
   hero-area h1 {
     width: 80%;
+    font-size: 3.75em;
   }
 
   /* Aside */
@@ -592,6 +730,11 @@ aside {
     width: 30%;
   }
 
+  .form-description p {
+    font-size: 1.125em;
+  }
+
+
   /* Features */
 
   .features h2 {
@@ -600,13 +743,23 @@ aside {
 
   .features article {
     /* flex-basis is a flex-box-item property so it's added to the item we want it applied to which is the article. */
-    flex-basis: 33%; /* 33% so 3 can fit on a single row;  */
+    flex-basis: 33%;
+    /* 33% so 3 can fit on a single row;  */
   }
 
 
   /* Reviews */
+  
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+
   .reviews article div {
-    width:42%;
+    width: 42%;
+  }
+  
+  footer h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
@@ -614,18 +767,29 @@ aside {
    ========================================================================== */
 
   .mission h2,
-  contact-section .content-wrapper h2 {
-    width: 95%
+  .contact-section .content-wrapper h2 {
+    width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
-   FAQ Page
-   ========================================================================== */
+  FAQ Page
+  ========================================================================== */
   .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
   }
 }
-
 
 /* end media query desktop */
 /*************************************************************************************************************/
