@@ -365,16 +365,17 @@ aside {
    ========================================================================== */
 
 /*************************************************************************************************************/
+/* start media query tablet */
 
 @media screen and (min-width: 768px) {
   /*Tablet styles here*/
 
   /* content wrapper for whole site */
   .content-wrapper {
-    width: 640px;
-    /* says the width of all the content is 90% */
+    max-width: 640px;
+    /* says the width of all the content is 640px */
     margin: 100px 0;
-    /* this is the 50px that are at the top and bottom of EACH section */
+    /* this is the 100px that are at the top and bottom of EACH section */
   }
 
 
@@ -393,7 +394,7 @@ aside {
     /* this isn't used one the larger screens!! */
   }
 
-  /* the nav takes up about 60% of the 90% from content wrapper */
+  /* the nav takes up about x% of the size of the  content wrapper */
   header nav {
     width: 20%;
   }
@@ -426,30 +427,28 @@ aside {
     align-items: center;
     flex-flow: column wrap;
     /*Specifies how flexbox items are placed in the flexbox.*/
-    flex-basis: 50%;
+    flex-basis: 50%; /* 50% so 2 can fit on a single row */
 
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%; 
   }
 
   /* Reviews */
   .reviews article {
     display: flex;
     justify-content: space-between;
-    width: 49%;
   }
 
   .reviews article div {
-    width:
+    width:49%;
 
   }
 
   /* Footer */
   footer .content-wrapper {
     width: 65%;
-    margin: 100px 0;
   }
 
   .footer-content {
@@ -491,7 +490,7 @@ aside {
   .contact-content {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: flex-start;
   }
 
   /* ==========================================================================
@@ -515,11 +514,77 @@ aside {
 /* end media query tablet */
 /*************************************************************************************************************/
 
+/*************************************************************************************************************/
+/* start media query desktop */
+
 @media screen and (min-width: 1200px) {
   /*Desktop styles here*/
+
+  /* content wrapper for whole site */
+  .content-wrapper {
+    max-width: 960px;
+    /* says the width of all the content is 960px */
+    /* margin: 0;     since there isn't a gap at the top and bottom of EACH section, zero out the margin and add where needed. */
+  }
+
+  /* -------------------------- Base Header - Footer Styles --------------- */
+  header {
+    padding: 15px 0;
+  }
+
+  /* Hero Area */
+  /* site is wider but you don't want the text to go all the way across */
+  hero-area h1 {
+    width: 80%;
+  }
+
+  /* Aside */
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
+
+  /* Features */
+
+  .features h2 {
+    width: 90%
+  }
+
+  .features article {
+    /* flex-basis is a flex-box-item property so it's added to the item we want it applied to which is the article. */
+    flex-basis: 33%; /* 33% so 3 can fit on a single row;  */
+  }
+
+
+  /* Reviews */
+  .reviews article div {
+    width:42%;
+  }
+
+  /* ==========================================================================
+   About Page
+   ========================================================================== */
+
+  .mission h2,
+  contact-section .content-wrapper h2 {
+    width: 95%
+  }
+
+  /* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+  .faq h2 {
+    width: 100%;
+  }
 }
 
 
+/* end media query desktop */
+/*************************************************************************************************************/
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 1.25dppx),
