@@ -129,7 +129,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
   font-weight: 500;
-  font-size: 1.875em;
+ 
 }
 
 h3,
@@ -145,9 +145,13 @@ p {
   line-height: 1.285;
 }
 
-img {}
+img {
+  width: 100%;
+}
 
-figure {}
+figure {
+  margin: 0;
+}
 
 address {
   font-style: normal;
@@ -182,6 +186,10 @@ header .content-wrapper {
   margin: 0;
   /* clears the marging specified in the general .content-wrapper. */
 
+}
+
+header figure {
+  width: 60%;
 }
 
 .header-divider {
@@ -254,6 +262,11 @@ footer .copyright {
 
 /* Hero Area */
 .hero-area {
+  background: url(../img/unplugged-retreat.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  /* added for images */
   display: flex;
   justify-content: center;
 }
@@ -302,6 +315,10 @@ input[type=button] {
 
 /* Features */
 .features {
+  background: url('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-position: center;
+  /* added fpr images */
   display: flex;
   justify-content: center;
 }
@@ -392,6 +409,9 @@ input[type=button] {
   margin-bottom: 50px;
 }
 
+.faq-content h4 {
+  line-height: 1.333;
+}
 
 /* ==========================================================================
    Helper classes
@@ -535,6 +555,11 @@ input[type=button] {
   }
 
   /* Hero Area */
+  
+  .hero-area {
+    min-height: 600px;
+  }
+  
   .hero-area h1 {
     font-size: 3em;
     line-height: 1;
