@@ -369,17 +369,17 @@ input[type=button] {
   display: flex;
   justify-content: center;
 }
-map figure { 
+
+.map figure {
   width: 100%;
-  height: 0; 
+  height: 0;
   padding-bottom: 125%; /* sets up the relationship between the height and width of the map. ie the aspect ratio */
   /* when you copied the map it was set to 600px(w) x 450px(h) to be responsive you want it maintain the aspect ratio */
   /* TO achieve that you se the padding-bottom to a percentage. TO get the ercentage, you divide the height by the width 450/600= .75 = 75% */
   /* If you want the map to be square, it would be 100% */
-  overflow: hidden; /* determines if the child element can exceed the parent W & H. In this case you don't want the map going outside of the map container. */
-  position: relative; /* doesn't have a direct effect but it does allow you to position the iFram absolutely */
+  overflow: hidden; 
+  position: relative;  /* doesn't have a direct effect but it does allow you to position the iFram absolutely */
 }
-
 .map iframe {
   width: 100%; /* fill 100% of the width  of map container div */
   height: 100%; /* fill 100% of the height of map container div */
