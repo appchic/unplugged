@@ -129,7 +129,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
   font-weight: 500;
- 
+
 }
 
 h3,
@@ -373,19 +373,27 @@ input[type=button] {
 .map figure {
   width: 100%;
   height: 0;
-  padding-bottom: 125%; /* sets up the relationship between the height and width of the map. ie the aspect ratio */
+  padding-bottom: 125%;
+  /* sets up the relationship between the height and width of the map. ie the aspect ratio */
   /* when you copied the map it was set to 600px(w) x 450px(h) to be responsive you want it maintain the aspect ratio */
   /* TO achieve that you se the padding-bottom to a percentage. TO get the ercentage, you divide the height by the width 450/600= .75 = 75% */
   /* If you want the map to be square, it would be 100% */
-  overflow: hidden; 
-  position: relative;  /* doesn't have a direct effect but it does allow you to position the iFram absolutely */
+  overflow: hidden;
+  position: relative;
+  /* doesn't have a direct effect but it does allow you to position the iFram absolutely */
 }
+
 .map iframe {
-  width: 100%; /* fill 100% of the width  of map container div */
-  height: 100%; /* fill 100% of the height of map container div */
-  position: absolute; /* how it's positioned in the map container */
-  top: 0;  /* starts at top  of map container div */
-  left: 0; /* starts all the way to left of map container div */
+  width: 100%;
+  /* fill 100% of the width  of map container div */
+  height: 100%;
+  /* fill 100% of the height of map container div */
+  position: absolute;
+  /* how it's positioned in the map container */
+  top: 0;
+  /* starts at top  of map container div */
+  left: 0;
+  /* starts all the way to left of map container div */
 }
 
 .contact-section {
@@ -573,11 +581,11 @@ input[type=button] {
   }
 
   /* Hero Area */
-  
+
   .hero-area {
     min-height: 600px;
   }
-  
+
   .hero-area h1 {
     font-size: 3em;
     line-height: 1;
@@ -617,6 +625,12 @@ input[type=button] {
     width: 62%;
   }
 
+  /* features icons size and spacing  */
+  .features i {
+    font-size: 3.75em;
+    margin-bottom: 40px;
+  }
+
   /* Reviews */
   .reviews article {
     display: flex;
@@ -636,7 +650,7 @@ input[type=button] {
     width: 75%;
     margin: 0;
   }
-  
+
   /* Footer */
   footer .content-wrapper {
     width: 65%;
@@ -645,7 +659,8 @@ input[type=button] {
   footer .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;    /*Aligns flex items along the cross axis of the current line of the flex container.*/
+    align-items: center;
+    /*Aligns flex items along the cross axis of the current line of the flex container.*/
     flex-direction: row;
   }
 
@@ -712,7 +727,7 @@ input[type=button] {
     width: 100%;
   }
 
-  
+
   .faq h4,
   .faq p {
     font-size: .875em;
@@ -792,7 +807,7 @@ input[type=button] {
 
 
   /* Reviews */
-  
+
   .reviews h2 {
     padding-bottom: 50px;
   }
@@ -800,7 +815,7 @@ input[type=button] {
   .reviews article div {
     width: 42%;
   }
-  
+
   footer h4 {
     font-size: 1.875em;
   }
