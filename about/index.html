@@ -38,13 +38,14 @@
             the `<figcaption>` element. It helps to associate a caption with a specific piece 
             of media content. 
         -->
-      <figure>
-        <!-- the # means the home page  -->
-        <a href="#"> <img src="../img/unpluggedlogo.png" alt="unplugged logo"></a>
-      </figure>
+        <figure>
+          <a href="../index.html"> 
+            <img src="../img/unpluggedlogo.png" alt="unplugged logo">
+          </a>
+        </figure>
 
       <!-- the dividing line between -->
-      <div class="header-dvider"></div>
+      <div class="header-divider"></div>
 
       <!-- navigation section  -->
       <nav>
@@ -53,9 +54,11 @@
                  should be opened in a new tab or window without allowing the new tab/window access to 
                  the referring tab/window. This is a security measure to prevent the newly opened tab/window 
                  from accessing sensitive information in the original tab/window. 
-            -->
-          <li><a href="../faq/index.html" target="_blank" rel="noopener">FAQ</a></li>
-          <li><a href="index.html" target="_blank" rel="noopener">About</a></li>
+               took out the target and rel to just open the page in the same window.
+                <li><a href="index.html" target="_blank" rel="noopener">FAQ</a></li> 
+          -->
+          <li><a href="../faq/index.html">FAQ</a></li>
+          <li><a href="index.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -139,17 +142,18 @@
         <div class="social">
           <h4>Social</h4>
           <div class="social-icons">
-            <!--  social links-->
-            <p><a href="https://www.facebook.com/" target="_blank rel=" noopener"></a></p>
-            <p><a href="https://www.linkedin.com/" target="_blank rel=" noopener"></a></p>
-            <p><a href="https://www.instagram.com/" target="_blank rel=" noopener"></a></p>
+            <!--  social links-->            
+            <p><a href="https://www.facebook.com/Skillcrush/" target="_blank"><i class="fab fa-facebook-f"></i></a></p>
+            <p> <a href="https://twitter.com/Skillcrush/" target="_blank"><i class="fab fa-twitter"></i></a></p>
+            <p><a href="https://www.instagram.com/skillcrush/" target="_blank"><i class="fab fa-instagram"></i></a></p>
           </div>
         </div>
       </div> <!-- footer content ends -->
+    </div> <!-- footer content-wrapper ends-->
       <div class="copyright">
         <p>Copyright 202x | Unplugged </p>
       </div>
-    </div> <!-- footer content-wrapper ends-->
+
   </footer>
 
 
